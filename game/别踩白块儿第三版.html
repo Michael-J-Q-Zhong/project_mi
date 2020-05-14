@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>别踩白块儿3.0</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #box {
+            width: 400px;
+            height: 600px;
+            margin: 0 auto;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box"></div>
+
+    <script>
+        class DontOnBlack {
+            constructor(oDom, obj) {
+                var defaultObj = {
+                    //行
+                    rowsWidth: 400,
+                    rowsHeight: 150,
+                    //块
+                    kuaiWidth: 100,
+                    kuaiHeight: 150,
+                    //白块
+                    whiteBGcolor: 'white',
+                    //黑块
+                    blackBGcolor: 'black'
+                }
+
+                for (let key in defaultObj) {
+                    this[key] = obj[key] == undefined ? defaultObj[key] : obj[key];
+                }
+
+                this.oDom = oDom;
+                this.kuaiCount = parseInt(this.rowsWidth / this.kuaiWidth);
+                this.rowsTop = -this.rowsHeight;
+                this.valueTop = -this.rowsHeight;
+                this.mytimer = null;
+                this.timespace = 1;
+                this.rowsNum = 0;
+                this.sport();
+                // this.addEvent();
+            }
+
+            createDiv() {
+                let rows = document.createElement('div');
+                rows.style.cssText = `
+                    height: ${this.rowsHeight}px;
+                    background-color: ${this.whiteBGColor};
+                    border: 1px solid black;
+                    border-right: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                    top: ${this.valueTop}px;
+                `;
+                rows.className = 'row';
+
+                if (this.oDom.children.length == 0) {
+                    this.oDom.appendChild(rows);
+                } else {
+                    this.oDom.prepend(rows);
+                }
+
+                for (let i = 0; i < this.kuaiCount; i++) {
+                    let kuai = document.createElement('div');
+                    kuai.style.cssText = `
+                        width: ${this.kuaiWidth}px;
+                        height: ${this.kuaiHeight}px;
+                        border: 1px solid black;
+                        background-color: ${this.whiteBGColor};
+                    `;
+                    kuai.className = 'white';
+                    this.oDom.firstElementChild.appendChild(kuai);
+                }
+
+                let blackNum = parseInt(Math.random() * this.kuaiCount);
+                this.oDom.firstElementChild.children[blackNum].style.backgroundColor = this.blackBGcolor;
+                this.oDom.firstElementChild.children[blackNum].className = 'black';
+            }
+
+            sport() {
+                if (this.oDom.children.length == 0) {
+                    this.createDiv();
+                }
+                this.mytimer = setInterval(() => {
+                    this.rowsTop += 1;
+                    this.rowsNum += 1;
+
+                    if (this.rowsNum >= this.rowsHeight) {
+                        this.rowsTop = this.valueTop;
+                        this.createDiv();
+                        this.rowsNum = 0;
+                    }
+
+                    if (this.oDom.lastElementChild.offsetTop >= 750) {
+                        this.oDom.removeChild(this.oDom.lastElementChild);
+                    }
+                    for (let j = 0; j < this.oDom.children.length; j++) {
+                        this.oDom.children[j].style.top = this.rowsTop + 'px';
+                    }
+                    this.addEvent();
+                    this.IFBlack();
+                }, this.timespace);
+            }
+
+            addEvent() {
+                let rowCh = document.getElementsByClassName('row');
+                for (let j = 0; j < rowCh.length; j++) {
+                    for (let i = 0; i < rowCh[j].children.length; i++) {
+                        rowCh[j].children[i].onclick = () => {
+                            if (rowCh[j].children[i].className == 'black') {
+                                rowCh[j].children[i].style.backgroundColor = 'white';
+                                rowCh[j].children[i].className = 'white';
+                            } else {
+                                alert('游戏结束');
+                                clearInterval(this.mytimer);
+                                this.mytimer = null;
+                            }
+                        }
+                    }
+                }
+
+                // for (let i = 0; i < this.oDom.lastElementChild.children.length; i++) {
+                //     this.oDom.lastElementChild.children[i].onclick = () => {
+                //         if (this.oDom.lastElementChild.children[i].className == 'black') {
+                //             this.oDom.lastElementChild.children[i].style.backgroundColor = 'white';
+                //             this.oDom.lastElementChild.children[i].className = 'white';
+                //         } else {
+                //             alert('游戏结束');
+                //             clearInterval(this.mytimer);
+                //             this.mytimer = null;
+                //         }
+                //     }
+                // }
+
+
+            }
+
+            IFBlack() {
+                let rowton = document.getElementsByClassName('row');
+                for (let j = 0; j < rowton.length; j++) {
+                    for (let i = 0; i < rowton[j].children.length; i++) {
+                        if (rowton[j].children[i].className == 'black' && rowton[j].offsetTop >= 600) {
+                            alert('游戏结束');
+                            clearInterval(this.mytimer);
+                            this.mytimer = null;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        window.onload = function () {
+            let box = document.getElementById('box');
+            let d1 = new DontOnBlack(box, {});
+        }
+    </script>
+</body>
+
+</html>

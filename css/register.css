@@ -1,0 +1,195 @@
+@charset "utf-8";
+html,body{
+    height: 100%;
+}
+body{
+    background: url(../images/register-bg.webp) no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+form{
+    width: 500px;
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    background: -webkit-linear-gradient(left,skyblue,orange);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px 0 0 20px;
+}
+form p{
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+form p:nth-of-type(1){
+    margin-top: 30px;
+}
+form p label{
+    width: 20%;
+    font-size: 24px;
+    color: green;
+    font-family: '幼圆';
+}
+form p input{
+    width: 45%;
+    height: 40px;
+    font-size: 20px;
+    text-indent: 10px;
+}
+form p span{
+    width: 30%;
+    font-size: 14px;
+    color: brown;
+    margin-left: 10px;
+}
+form p .iconfont{
+    position: absolute;
+    top: 20px;
+    right: 180px;
+    font-size: 20px;
+}
+form p .iconfont:hover{
+    cursor: pointer;
+}
+form p:nth-of-type(4){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+}
+form p:nth-of-type(4) em{
+    display: block;
+    padding: 5px 25px;
+    border-radius: 20px;
+    font-size: 20px;
+    opacity: 0.1;
+    font-weight: bold;
+}
+form p:nth-of-type(4) em:nth-of-type(1){
+    color: white;
+    border: 1px solid red;
+    background-color: red;
+}
+form p:nth-of-type(4) em:nth-of-type(2){
+    color: white;
+    border: 1px solid yellow;
+    background-color: yellow;
+}
+form p:nth-of-type(4) em:nth-of-type(3){
+    color: white;
+    border: 1px solid green;
+    background-color: green;
+}
+form p:nth-of-type(6) b{
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    margin-left: 10px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+    background: -webkit-linear-gradient(left,yellow,red);
+    background-color: yellowgreen;
+}
+form aside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+form aside input{
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    letter-spacing: 10px;
+    margin: 0 auto;
+    display: inline-block;
+    border: 1px solid rgb(183, 214, 177);
+    text-align: center;
+    color: black;
+    background: rgba(0,0,0,0);
+    transition: 1s;
+}
+form aside input:nth-of-type(1):hover{
+   border: 1px solid brown;
+   transform: translateX(10px);
+}
+form aside input:nth-of-type(2):hover{
+    border: 1px solid brown;
+    transform: translateX(-10px);
+}
+/* form aside input[value='注册']{
+    background-color: orange ;
+}
+form aside input[value='清空']{
+    background-color: skyblue;
+} */
+h2{
+    font-size: 26px;
+    font-family: '幼圆';
+    display: inline-block;
+    position: absolute;
+    z-index: 5;
+    font-weight: bold;
+}
+#str1{
+    top: -10px;
+    right: 490px;
+    animation: run 2s 1s linear both;
+    -webkit-animation: run 2s 1s linear both;
+}
+#str2{
+    top: -10px;
+    right: 470px;
+    animation: run2 2s 1.5s linear both;
+    -webkit-animation: run2 2s 1.5s linear both;
+}
+@keyframes run{
+    0%{
+        top:-10px;
+        right: 490px;
+    }
+    25%{
+        top:160px;
+        right:490px;
+    }
+    50%{
+        top: 110px;
+        right: 480px;
+    }
+    75%{
+        top:140px;
+        right: 470px;
+    }
+    100%{
+        top: 130px;
+        right: 460px;
+    }
+}
+@keyframes run2{
+    0%{
+        top:-10px;
+        right: 470px;
+    }
+    25%{
+        top:160px;
+        right:460px;
+    }
+    50%{
+        top: 110px;
+        right: 450px;
+    }
+    75%{
+        top:140px;
+        right: 440px;
+    }
+    100%{
+        top: 130px;
+        right: 430px;
+    }
+}

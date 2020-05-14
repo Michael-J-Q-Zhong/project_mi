@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./icon/loginreg-icon/iconfont.css">
+</head>
+
+<body>
+    <div id="box">
+        <header>
+            <h2>登</h2>
+            <h2>录</h2>
+        </header>
+        <article class="input">
+            <p>
+                <i class="iconfont icon1 icon-xingmingyonghumingnicheng"></i>
+                <input type="text" placeholder="用户名/手机号" id="txt" minlength="2" maxlength="16">
+                <span>没有用户名？<a href="./register.html">注册</a>一个吧</span>
+            </p>
+            <p>
+                <i class="iconfont icon1 icon-mima"></i>
+                <input type="password" placeholder="密码" id="psd" minlength="6" maxlength="16">
+                <i class="iconfont icon2 icon-miyan"></i>
+            </p>
+            <p> 
+                <input type="text" id="code">
+                <input type="button" value="获取验证码">
+            </p>
+        </article>
+        <p class="check">
+            <a href="./findPassword.html">忘记密码？</a>
+        </p>
+        <section><input type="button" value="登录" id="login"></section>
+    </div>
+
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/cookie.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

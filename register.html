@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="./icon/loginreg-icon/iconfont.css">
+</head>
+
+<body>
+    <h2 id="str1">注</h2>
+    <h2 id="str2">册</h2>
+    <form action="" id="form">
+        <p>
+            <label for="phonenumber">手机号</label>
+            <input type="text" id="phonenumber" maxlength="11" minlength="7">
+            <span></span>
+        </p>
+        <p>
+            <label for="username">用户名</label>
+            <input type="text" id="username" maxlength="16" minlength="2">
+            <span>2-16位字符，汉字，下划线，数字，字母</span>
+        </p>
+        <p>
+            <label for="password">密码</label>
+            <input type="password" id="password" maxlength="16" minlength="6">
+            <span>6-16位字符，字母，数字，$,+,&</span>
+            <i class="iconfont icon-miyan"></i>
+        </p>
+        <p>
+            <em>低</em><em>中</em><em>高</em>
+        </p>
+        <p>
+            <label for="dbpassword">确认密码</label>
+            <input type="password" id="dbpassword" maxlength="16" minlength="6">
+            <span></span>
+            <i class="iconfont icon-miyan"></i>
+        </p>
+        <p>
+            <label for="code">验证码</label>
+            <input type="text" id="code" placeholder="请输入右侧算术的结果">
+            <b></b>
+        </p>
+        <aside>
+            <input type="button" value="注册" id="reg">
+            <input type="button" value="清空" id="clear">
+        </aside>
+        <strong id="result"></strong>
+    </form>
+
+    <script src="./js/jQuery.js"></script>
+    <script src="./js/isUndefined.js"></script>
+    <script src="./js/register.js"></script>
+</body>
+
+</html>

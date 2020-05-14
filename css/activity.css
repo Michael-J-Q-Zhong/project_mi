@@ -1,0 +1,157 @@
+@charset "utf-8";
+.content-wrap{
+    width: 1214px;
+    margin: 0 auto;
+}
+#bg{
+    height: 940px;
+    overflow-x: hidden;
+}
+.bg-wrap{
+    position: relative;
+}
+.bg-wrap img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2560px;
+    margin-left: -1280px;
+}
+.bg-wrap a{
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+.bg-wrap section{
+    width: 40px;
+    height: 40px;
+    background:url(../images/034174a03d1db25a44bc4dac00b406cc.png) no-repeat center;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0px;
+    left: 70px;
+    z-index: 5;
+}
+#content{
+    background-color: #e6632d;
+}
+.content-title{
+    position: relative;
+    height: 144px;
+    overflow-x: hidden;
+}
+.content-title img{
+    width: 2560px;
+    position: absolute;
+    top: 0;
+    display: block;
+    height: 100%;
+    left: 50%;
+    margin-left: -1280px;
+}
+.content-con{
+    margin-top: 10px;
+}
+.threeCon{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    flex-wrap: wrap;
+}
+.threeCon>.con{
+    height: 453px;
+    width: 32.5%;
+    background-color: white;
+}
+.threeCon>.con article{
+    height: 266px;
+    overflow: hidden;
+}
+.threeCon>.con article img{
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+}
+.threeCon>.con article img:hover{
+    transform: scale(1.1);
+}
+.threeCon>.con aside{
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.threeCon>.con aside h2{
+    font-size: 22px;
+    color: #242424;
+    margin-top: 25px;
+    font-weight: 400;
+}
+.threeCon>.con aside span{
+    display: block;
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+    color: #666;
+}
+.threeCon>.con aside p{
+    font-size: 24px;
+    margin-top: 7px;
+    color: rgb(234, 98, 91);
+}
+.threeCon>.con aside p em{
+    font-size: 14px;
+}
+.threeCon>.con aside a{
+    height: 44px;
+    width: 160px;
+    font-size: 18px;
+    color: white;
+    line-height: 44px;
+    text-align: center;
+    margin: 10px 0;
+    border-radius: 2px;
+    background-color: rgb(234, 98, 91);
+}
+.threeCon>.con aside p del{
+    font-size: 14px;
+    margin-left: 5px;
+    color: #999;
+}
+.fourCon>.con{
+    width: 24%;
+}
+.fourCon>.con aside h2{
+    font-size: 20px;
+}
+.fourCon>.con aside a{
+    width: 124px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+
+/* rightnav */
+#rightnav{
+    position: fixed;
+    top: 50%;
+    left: 95%;
+    background-color: white;
+}
+#rightnav a{
+    display: block;
+    width: 20px;
+    height: 40px;
+    padding: 5px;
+}
+#rightnav a:hover .iconfont{
+    color: #ff6700;
+}
+#rightnav a .iconfont{
+    font-size: 20px;
+    color: gray;
+}

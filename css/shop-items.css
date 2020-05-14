@@ -1,0 +1,222 @@
+@charset "utf-8";
+.items-wrap{
+    width: 1214px;
+    margin: 0 auto;
+}
+.navli-first-left{
+    position: absolute;
+    top: 140px;
+    left: 5%;
+    z-index: 3;
+    width: 18%;
+    background-color: white;
+    border: 1px solid #ff6700;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+.navli-first-left ul{
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.navli-first-left ul li{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    padding: 0 20px 0 30px;
+    box-sizing: border-box;
+}
+.navli-first-left ul li:hover{
+    background-color: #ff6700;
+}
+.navli-first-left ul li a{
+    color: gray;
+    font-size: 14px;
+}
+.navli-first-left ul li:hover a{
+    color: white;
+}
+.navli-first-left ul li span .iconfont{
+    color: #ccc;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* swiper */
+#swiper{
+    width: 100%;
+    height: 620px;
+}
+.swiper-wrap{
+    width: 100%;
+    height: 620px;
+    position: relative;
+    overflow: hidden;
+}
+.swiper-wrap img{
+    position: relative;
+    left: 50%;
+    margin-left: -1280px;
+    height: 620px;
+    float: left;
+}
+
+#items{
+    background-color: #f5f5f5;
+    padding-bottom: 70px;
+}
+.items-top{
+    height: 64px;
+}
+.items-top h2{
+    font-size: 24px;
+    color: #333;
+    line-height: 64px;
+    padding-top: 4px;
+}
+.items1{
+    width: 100%;
+    height: 434px;
+    display: flex;
+}
+.items1:hover{
+    box-shadow:0px 0px 50px #ccc;
+}
+.items1 img{
+    height: 434px;
+}
+.items1 section{
+    flex: 1;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.items1 section article{
+    width: 270px;
+    height: 320px;
+    position: relative;
+}
+.items1 section article h3{
+    font-size: 32px;
+    color: #333;
+}
+.items1 section article .p1{
+    min-height: 44px;
+    line-height: 22px;
+    color: rgba(51,51,51,.7);
+    font-size: 14px;
+    width: 270px;
+    margin-top: 4px;
+}
+.items1 section article .price{
+    font-size: 28px;
+    color: #ff6700;
+    letter-spacing: -2px;
+    line-height: 45px;
+    margin-top: 17px;
+}
+.items1 section article .price span{
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+.items1 section article a{
+    color: rgba(51,51,51,.7);
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.two{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.items2{
+    width: 49%;
+    height: 482px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+}
+.items2:hover{
+    box-shadow: 0px 0px 10px #ccc;
+}
+.items2 img{
+    height: 358px;
+}
+.items2 section{
+    width: 100%;
+    padding: 38px 48px;
+    height: 124px;
+    box-sizing: border-box;
+    background-color: white;
+}
+.items2 section article{
+    position: relative;
+}
+.items2 section article h3{
+    font-size: 24px;
+    color: rgba(51,51,51,.9);
+}
+.items2 section article .p1{
+    font-size: 14px;
+    color: rgba(51,51,51,.7);
+    line-height: 18px;
+    margin-top: 5px;
+}
+.items2 section article .price{
+    position: absolute;
+    right: 0;bottom: 0;
+    color: #ff6700;
+    font-size: 26px;
+}
+.items2 section article .price span{
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+.items2 section article .price del{
+    font-size: 12px;
+    color: gray;
+}
+
+.bannerdetailed1{
+    position: absolute;
+    background-color: white;
+    box-shadow: 1px 1px 5px #ccc;
+    padding: 20px;
+    height: 460px;
+    z-index: 5;
+    box-sizing: border-box;
+    top: 0;
+    left: 101%;
+    display: flex;
+}
+.bannerdetailed1 dl{
+    float: left;
+    flex: 1;
+}
+.bannerdetailed1 dl dd img{
+    width: 40px;
+    height: 40px;
+}
+.bannerdetailed1 dl dd{
+    width: 236px;
+    display: flex;
+    justify-content: flex-start;
+    height: 14%;
+    margin-bottom: 15px;
+}
+.bannerdetailed1 dl:nth-last-of-type(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.bannerdetailed1 dl dd span{
+    font-size: 14px;
+    margin-left: 10px;
+    line-height: 40px;
+}

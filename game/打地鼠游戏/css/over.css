@@ -1,0 +1,20 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    height: 100%;
+}
+body{
+    background: url(../img/over.jpg) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-size: 50px;
+    color: orange;
+    letter-spacing: 10px;
+}

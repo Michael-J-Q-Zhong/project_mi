@@ -1,0 +1,491 @@
+@charset "utf-8";
+.nav-wrap{
+    width: 95%;
+    margin: 0 auto;
+}
+#nav{
+    background-color: black;
+    height: 76px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+.nav-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.nav-left{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.nav-left img{
+    margin-right: 20px;
+}
+.nav-left ul li{
+    float: left;
+    padding: 0 20px;
+}
+.nav-left ul li a{
+    color: #cbcccc;
+    font-size: 14px;
+}
+.nav-right{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-right aside{
+   display: flex;
+   align-items: center;
+   height: 76px;
+}
+.nav-right aside .download{
+    position: absolute;
+    top: 76px;
+    right: 20%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+.nav-right aside .download img{
+    width: 100px;
+    height: 100px;
+}
+.nav-right aside span{
+    color: #cbcccc;
+    margin-left: 5px;
+    font-size: 14px;
+}
+.nav-right section{
+    display: flex;
+    align-items: center;
+ }
+.nav-right section span{
+     color: #cbcccc;
+     margin-right: 5px;
+     font-size: 14px;
+}
+#bg{
+    width: 100%;
+    height: 1500px;
+    overflow: hidden;
+}
+.bgy{
+    background: url(../threesongshu-images/bgy.jpg) no-repeat;
+    width: 100%;
+    height: 1500px;
+    position: absolute;
+    background-position: center top;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.yz{
+    position: absolute;
+    width: 100%;
+    height: 1365px;
+    top: -650px;
+    left: 0;
+    opacity: 0;
+    background: url(../threesongshu-images/yz.png) no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    animation: yz 10s linear both;
+    z-index: 10;
+}
+
+.cb2{
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    background: url(../threesongshu-images/cb2.png) no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    opacity: 0;
+    left: 0;
+    top: -250px;
+    z-index: 9;
+    animation: cb2 10s linear both;
+    -webkit-animation: cb2 10s linear both;
+}
+.cb3{
+    position: absolute;
+    width: 100%;
+    height: 623px;
+    background: url(../threesongshu-images/cb3.png) no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    opacity: 0;
+    left: 0;
+    top: -60px;
+    animation: cb3 7s 2.1s linear both;
+    z-index: 8;
+}
+.cb4{
+    position: absolute;
+    width: 100%;
+    height: 806px;
+    background: url(../threesongshu-images/cb4.png) no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    left: 0;
+    top: -200px;
+    z-index: 7;
+    animation: cb4 7s 2.1s linear both;
+    opacity: 0;
+}
+.cb5{
+    position: absolute;
+    width: 100%;
+    height: 1289px;
+    background: url(../threesongshu-images/cb5.png) no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    left: 0;
+    top: -300px;
+    z-index: 6;
+    animation: cb5 5s 1.5s linear both;
+    opacity: 0;
+}
+.bt{
+    position: absolute;
+    width: 806px;
+    height: 182px;
+    background: url(../threesongshu-images/bt.png) no-repeat;
+    opacity: 0;
+    top: 350px;
+    left: 50%;
+    margin-left: -403px;
+    z-index: 11;
+    opacity: 0;
+    animation: bt 1s 5.5s linear both;
+}
+.a2233{
+    position: absolute;
+    width: 960px;
+    height: 540px;
+    background: url(../threesongshu-images/2323.png) no-repeat;
+    top: 300px;
+    left: 50%;
+    margin-left: -450px;
+    z-index: 20;
+    transform: scale(1.3);
+    animation: ab2233 2s 5s steps(12) forwards;
+}
+.text{
+    position: absolute;
+    width: 282px;
+    left: 50%;
+    margin-left: -161px;
+    bottom: 10px;
+    z-index: 20;
+    background: url(../threesongshu-images/xbt.png) no-repeat;
+    height: 100px;
+    opacity: 0;
+    animation: text 1s 6s linear both;
+    -webkit-animation: text 1s 6s linear both;
+}
+#movie{
+    height: 405px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 1300px;
+    z-index: 24;
+    width: 100%;
+}
+.zr{
+    background: url(../threesongshu-images/zhuren.png) no-repeat;
+    width: 548px;
+    height: 512px;
+    position: absolute;
+    left: 200px;
+    top: -107px;
+    z-index: 25;
+}
+.m{
+    width: 395px;
+    height: 87px;
+    background: url(../threesongshu-images/LITE_r32_c11.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    right: 200px;
+    margin-top: -43px;
+    z-index: 25;
+}
+#movban{
+    width: 100%;
+    height: 297px;
+    position: absolute;
+    top: 1705px;
+    left: 0;
+    overflow-x: hidden;
+}
+.overban{
+    background: url(../threesongshu-images/long.jpg) no-repeat;
+    height: 297px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 26;
+    width: 100%;
+}
+#end{
+    height: 355px;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top: 2000px;
+    left: 0;
+    z-index: 27;
+}
+
+@keyframes yz{
+    0%{
+        opacity: 0;
+        top: -700px;
+    }
+
+    10%{
+        opacity: 0.7;
+        top: -700px;
+    }
+    20%{
+        opacity: 1;
+        top: -700px;
+    }
+    30%{
+        opacity: 1;
+        top: 0px;
+    }
+    40%{
+        opacity: 1;
+        top: 700px;
+    }
+    50%{
+        opacity: 1;
+        top: 1300px;
+    }
+    60%{
+        opacity: 1;
+        top: 1500px;
+    }
+    /* 70%{
+        opacity: 1;
+        top: 1800px;
+    }
+    80%{
+        opacity: 1;
+        top: 1800px;
+    }
+    90%{
+        opacity: 1;
+        top: 1800px;
+    } */
+    100%{
+        opacity: 1;
+        top: 1800px;
+    }
+}
+
+@keyframes cb2{
+    0%{
+        opacity: 0;
+        top: -250px;
+    }
+
+    10%{
+        opacity: 0.3;
+        top: -250px;
+    }
+    20%{
+        opacity: 1;
+        top: -250px;
+    }
+    30%{
+        opacity: 1;
+        top: 200px;
+    }
+    40%{
+        opacity: 1;
+        top: 700px;
+    }
+    50%{
+        opacity: 1;
+        top: 1000px;
+    }
+    60%{
+        opacity: 1;
+        top: 1400px;
+    }
+    70%{
+        opacity: 1;
+        top: 1700px;
+    }
+    /* 80%{
+        opacity: 1;
+        top: 2100px;
+    }
+    90%{
+        opacity: 1;
+        top: 2100px;
+    } */
+    100%{
+        opacity: 1;
+        top: 2100px;
+    }
+}
+
+@keyframes cb3{
+    0%{
+        opacity: 0;
+        top: -60px;
+    }
+
+    10%{
+        opacity: 1;
+        top: -60px;
+    }
+    20%{
+        opacity: 1;
+        top: 500px;
+    }
+    30%{
+        opacity: 1;
+        top: 1000px;
+    }
+    /* 40%{
+        opacity: 1;
+        top: 1000px;
+    }
+    50%{
+        opacity: 1;
+        top: 1000px;
+    }
+    60%{
+        opacity: 1;
+        top: 1000px;
+    }
+    70%{
+        opacity: 1;
+        top: 1000px;
+    }
+    80%{
+        opacity: 1;
+        top: 1000px;
+    }
+    90%{
+        opacity: 1;
+        top: 1000px;
+    } */
+    100%{
+        opacity: 1;
+        top: 1000px;
+    }
+}
+
+@keyframes cb4{
+    0%{
+        opacity: 0;
+        top: -200px;
+    }
+
+    10%{
+        opacity: 1;
+        top: -200px;
+    }
+    20%{
+        opacity: 1;
+        top: 300px;
+    }
+    30%{
+        opacity: 1;
+        top: 650px;
+    }
+    /* 40%{
+        opacity: 1;
+        top: 650px;
+    }
+    50%{
+        opacity: 1;
+        top: 650px;
+    }
+    60%{
+        opacity: 1;
+        top: 650px;
+    }
+    70%{
+        opacity: 1;
+        top: 650px;
+    }
+    80%{
+        opacity: 1;
+        top: 650px;
+    }
+    90%{
+        opacity: 1;
+        top: 650px;
+    } */
+    100%{
+        opacity: 1;
+        top: 650px;
+    }
+}
+
+@keyframes cb5{
+    0%{
+        opacity: 0;
+        top: -300px;
+    }
+
+    25%{
+        opacity: 1;
+        top: -300px;
+    }
+    50%{
+        opacity: 1;
+        top: 40px;
+    }
+    75%{
+        opacity: 1;
+        top: 140px;
+    }
+    100%{
+        opacity: 1;
+        top: 200px;
+    }
+}
+@keyframes bt{
+    from{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes ab2233{
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: -11520px 0;
+    }
+}
+@keyframes text{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

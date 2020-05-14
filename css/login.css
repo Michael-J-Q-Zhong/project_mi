@@ -1,0 +1,103 @@
+@charset "utf-8";
+html,body{
+    height: 100%;
+}
+body{
+    background: url(../images/login-bg.jpg) no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+#box{
+    width: 230px;
+    margin: 80px auto;
+    padding-bottom: 20px;
+}
+header{
+    text-align: center;
+}
+header h2{
+    display: inline;
+    font-size: 20px;
+    color: black;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+.input p{
+    height: 30px;
+    display: flex;
+    margin: 15px 0;
+    position: relative;
+}
+.input p .icon1{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+.input p .icon2{
+    position: absolute;
+    right: 10px;
+}
+.input p .icon2:hover{
+    cursor: pointer;
+}
+.input p input{
+    height: 30px;
+    width: 200px;
+    font-size: 14px;
+    text-indent: 10px;
+}
+.input p:nth-of-type(3) input[type=text]{
+    width: 100px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+.input p:nth-of-type(3) input[type=button]{
+    width: 120px;
+    box-sizing: border-box;
+    background-color: #ff6700;
+    color: white;
+    border: 1px solid #ff6700;
+}
+.input p span{
+    font-size: 14px;
+    line-height: 30px;
+    color: black;
+    margin-left: 10px;
+}
+.check{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.check span label{
+    font-size: 12px;
+}
+.check a{
+    color: white;
+    font-size: 12px;
+}
+.check a:hover{
+    color: brown;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+section input{
+    width: 230px;
+    height: 30px;
+    background-color: rgba(7, 153, 68, 0.5);
+    border: 1px solid rgb(7,153,68);
+    color: white;
+}
