@@ -66,7 +66,8 @@ function getShonCen() {
     $.get('./php/getShoppingCart.php', {
         vipName: co
     },(data)=>{
-        let ht = '';
+        if(data.length > 0){
+            let ht = '';
             if(data.length > 0){
                 data.forEach(ele => {
                     ht += `
@@ -78,6 +79,8 @@ function getShonCen() {
                 });
                 $('.shoppingCen').html(ht);
             }
+        }
+        
     },'json')
 }
 $(function(){
