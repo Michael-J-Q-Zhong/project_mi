@@ -28,4 +28,10 @@ gulp.task('default', async ()=>{
         gulp.src('./php/**/*')
         .pipe(gulp.dest('F:\\phpstudy2016\\WWW\\project_mi\\php'));
     })
+
+    //img
+    gulp.watch('./images/**/*', async ()=>{
+        gulp.src('./images/**/*')
+        .pipe(gulp.dest('F:\\phpstudy2016\\WWW\\project_mi\\images'));
+    })
 })

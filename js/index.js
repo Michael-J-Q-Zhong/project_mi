@@ -89,6 +89,33 @@ function setTime() {
 setTime();
 
 
+function getPhone(){
+    $.get('./php/getGoodsList.php',{
+        typeId:'001'
+    },(phoneData) => {
+        let phoneStr = '';
+        phoneData = JSON.parse(phoneData);
+        phoneData.forEach(element => {
+            phoneStr += `
+                <div class="phone-content">
+                <img src="./images/${element.goodsImg}" alt="" title="${element.goodsId}">
+                <p>${element.goodsName}</p>
+                <span>${element.goodsDesc}</span>
+                <b>${element.goodsPrice}元起</b>
+                </div>
+            `;
+        });
+        $('.phone-right').html(phoneStr);
+        $('.phone-content').click(function(){
+            location.href = './shop-detailed.html?goodsId='+$(this).find('img').attr('title');
+        })
+    });
+}
+
+$(function(){
+    getPhone();
+})
+
 
 
 
