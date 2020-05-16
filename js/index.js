@@ -106,14 +106,83 @@ function getPhone(){
             `;
         });
         $('.phone-right').html(phoneStr);
-        $('.phone-content').click(function(){
+        $('#phone>.phone-content').click(function(){
             location.href = './shop-detailed.html?goodsId='+$(this).find('img').attr('title');
         })
     });
 }
 
+function getHousehold(){
+    let householdStr = '';
+    $.get('./php/getGoodsList.php',{
+        typeId:'002'
+    },(householdData)=>{
+        householdStr += `
+            <div class="household-content">
+            <img src="./images/b56fd90a60e3d9e5d87dae9fbd427ea8.webp" alt="">
+            </div>
+        `;
+        householdData.forEach(function(data){
+            householdStr += `
+                <div class="phone-content">
+                <img src="./images/${data.goodsImg}" alt="" title="${data.goodsId}">
+                <p>${data.goodsName}</p>
+                <span>${data.goodsDesc}</span>
+                <b>${data.goodsPrice}元起</b>
+                </div>
+            `;
+        })
+
+        householdStr += `
+                <div class="household-content">
+                <img src="./images/b67de5a8ce9025fb5d8bac66e019d1c3.webp" alt="">
+                </div>
+                <div class="phone-content">
+                    <img src="./images/ec20453216dcd42f982cffe5fdbc3115.webp" alt="">
+                    <p>米家互联网洗烘一体机 Pro 10KG</p>
+                    <span>智能洗烘，省心省力</span>
+                    <b>2999元</b>
+                </div>
+                <div class="phone-content">
+                    <img src="./images/b8c63a2024528fe5410ebe669b7d2407.webp" alt="">
+                    <p>Redmi全自动波轮洗衣机1A 8KG</p>
+                    <span>一键操作，父母都爱用</span>
+                    <b>749元<del>899元</del></b>
+                </div>
+                <div class="phone-content">
+                    <img src="./images/cd2aa2dcad6440b469c22e27db9b6236.webp" alt="">
+                    <p>15.6"四核i7 16G 独显 512G</p>
+                    <span>全面均衡的国民轻薄本</span>
+                    <b>4699元<del>4899元</del></b>
+                </div>
+                <div class="household-content1">
+                    <div class="household-content-top">
+                        <div class="household-content-top-p">
+                            <p>Air 13.3" 2019款</p>
+                            <span>3999元起</span>
+                        </div>
+                        <img src="./images/74e573c4c0d89048392d14831cc507d5.webp" alt="">
+                    </div>
+                    <div class="household-content-top">
+                        <div class="household-content-top-p">
+                            <p>浏览更多</p>
+                            <em>热门</em>
+                        </div>
+                        <i class="iconfont icon-youjiantou"></i>
+                    </div>
+                </div>
+        `;
+        $('.household-wrap>.household-bottom').html(householdStr);
+        $('.household-wrap>.household-bottom>.phone-content').click(function(){
+            location.href = './shop-detailed.html?goodsId=' + $(this).find('img').attr('title');
+        })
+    },'json')
+}
+
+
 $(function(){
     getPhone();
+    getHousehold();
 })
 
 
